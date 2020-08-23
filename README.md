@@ -1,5 +1,4 @@
-The run_analysis.R file included in this repo is the solution to the final task required by the course
-"Getting and Cleaning Data". 
+The run_analysis.R file included in this repo is the solution to the final task required by the course "Getting and Cleaning Data". 
 
 First of all, I downloaded and extracted the data set under the folder called "UCI HAR Dataset". 
 I then assigned each file to a dataset:
@@ -25,3 +24,30 @@ Let's now address the 5 points required by the task:
 dataQ2 is created from data, selecting only this columns: subject, code and mean and std for each measurement. 
 
 3) Use descriptive activity names to name the activities in the data set.
+Column code was replaced by corresponding activity taken from the second column of variable activities. 
+
+4) Appropriately label the data set with descriptive variable names. 
+- code renamed in activities 
+- Acc replaced by Accelerometer 
+- Gyro replaced by Gyroscope 
+- BodyBody replaced by Magnitude 
+- All words starting with t have been replaced with Time
+- All words starting with f have been replaced with Frequency
+- tbody replaced by TimeBody 
+- angle replaced by Angle 
+- gravity replaced by Gravity 
+
+5) From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject. 
+FinalData is created from dataQ2. First of all, dataQ2 was grouped by subject and activity, then we take the means of each variable for each activity and each subject. 
+Finally, FinalData was exported as FinalData.txt
+
+
+
+
+
+
+
+
+
+
+
